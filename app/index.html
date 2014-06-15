@@ -8,7 +8,8 @@
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css styles/vendor.css -->
     <!-- bower:css -->
-    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <link data-require="bootstrap-css@2.3.2" data-semver="2.3.2" rel="stylesheet" href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" />
+    <link rel="stylesheet" href="styles/multiselect-style.css" />
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
@@ -28,7 +29,7 @@
           <li><a ng-href="#/about">About</a></li>
           <li><a ng-href="#">Contact</a></li>
         </ul>
-        <h3 class="text-muted">inMemInfoDash</h3>
+        <h3 class="text-muted">Insights Dashboard</h3>
       </div>
       <span>Multi Select:</span>
       <multiselect class="input-xlarge" multiple="true"
@@ -47,9 +48,9 @@
           {{selectedFruit}}
       </div> 
       <div ng-view=""></div>
-      <div id="chartdiv" style="width: 640px; height: 400px;"></div>
+      <div id="chartdiv" style="width: 640px; height: 320px; margin:0 auto;"></div>
       <div class="footer">
-        <p><span class="glyphicon glyphicon-heart"></span>The Insights team.</p>
+        <p><span class="glyphicon glyphicon-heart"></span>the Insights team.</p>
       </div>
     </div>
 
