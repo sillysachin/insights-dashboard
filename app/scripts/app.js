@@ -8,14 +8,15 @@
  *
  * Main module of the application.
  */
-angular
+var app = angular
   .module('inMemInfoDashApp', [
     'ngAnimate',
     'ngCookies',
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngTouch'
+    'ngTouch',
+    'ui.multiselect'
   ])
   .config(function ($routeProvider) {
     $routeProvider
@@ -31,3 +32,12 @@ angular
         redirectTo: '/'
       });
   });
+
+app.controller('DashboardCtrl', function($scope) {
+  $scope.name = 'World';
+    $scope.cars = [{id:1, name: 'Audi'}, {id:2, name: 'BMW'}, {id:1, name: 'Honda'}];
+    $scope.selectedCar = [];
+
+    $scope.fruits = [{id: 1, name: 'Apple'}, {id: 2, name: 'Orange'},{id: 3, name: 'Banana'}];
+    $scope.selectedFruit = null;
+});

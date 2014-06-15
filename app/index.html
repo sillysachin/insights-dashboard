@@ -8,14 +8,15 @@
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css styles/vendor.css -->
     <!-- bower:css -->
-    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <link data-require="bootstrap-css@2.3.2" data-semver="2.3.2" rel="stylesheet" href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" />
+    <link rel="stylesheet" href="styles/multiselect-style.css" />
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
   </head>
-  <body ng-app="inMemInfoDashApp">
+  <body ng-app="inMemInfoDashApp" ng-controller="DashboardCtrl">
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
@@ -30,7 +31,22 @@
         </ul>
         <h3 class="text-muted">inMemInfoDash</h3>
       </div>
-
+      <span>Multi Select:</span>
+      <multiselect class="input-xlarge" multiple="true"
+      ng-model="selectedCar"
+      options="c.name for c in cars"
+      change="selected()" ></multiselect>
+      <div class="well well-small">
+          {{selectedCar}}
+      </div>
+      <span>Single Select:</span>
+      <multiselect class="input-xlarge"
+      ng-model="selectedFruit"
+      options="c.name for c in fruits"
+      change="selected()" ></multiselect>
+      <div class="well well-small">
+          {{selectedFruit}}
+      </div> 
       <div ng-view=""></div>
 
       <div class="footer">
@@ -69,11 +85,11 @@
     <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
-
-        <!-- build:js({.tmp,app}) scripts/scripts.js -->
-        <script src="scripts/app.js"></script>
-        <script src="scripts/controllers/main.js"></script>
-        <script src="scripts/controllers/about.js"></script>
-        <!-- endbuild -->
-</body>
+    <!-- build:js({.tmp,app}) scripts/scripts.js -->
+    <script src="scripts/app.js"></script>
+    <script src="scripts/multiselect.js"></script>
+    <script src="scripts/controllers/main.js"></script>
+    <script src="scripts/controllers/about.js"></script>
+    <!-- endbuild -->
+  </body>
 </html>
