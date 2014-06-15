@@ -1,0 +1,13 @@
+Multi-Select -> https://github.com/amitava82/angular-multiselect
+Fix angular-multiselect to use bower structure.
+Fix angular-multiselect to use ajax data.
+Fix angular-multiselect to use bootstrap3.
+
+AmCharts -> http://stackoverflow.com/questions/23009890/amcharts-with-angularjs
+Bring in Support for AmCharts.
+
+Highcharts -> http://stackoverflow.com/questions/17451941/how-to-produce-a-highchart-using-angular-js-with-json-data-coming-from-an-ajax
+Bring in Support for Highcharts.
+
+D3.js -> https://github.com/n3-charts/line-chart
+Bring in Support for D3.js.
