@@ -1,4 +1,4 @@
-Multi-Select -> https://github.com/amitava82/angular-multiselect
+Multi-Select -> https://github.com/amitava82/angular-multiselect or http://jsfiddle.net/jaredwilli/vUSPu/
 Fix angular-multiselect to use bower structure.
 Fix angular-multiselect to use ajax data.
 Fix angular-multiselect to use bootstrap3.
